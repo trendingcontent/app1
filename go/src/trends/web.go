@@ -4,6 +4,7 @@ import (
     "fmt"
     "net/http"
     "os"
+    "io/ioutil"
 )
 
 func main() {
@@ -17,5 +18,9 @@ func main() {
 }
 
 func hello(res http.ResponseWriter, req *http.Request) {
-    fmt.Fprintln(res, "hello, world")
+    b,err := ioutil.ReadFile("html/index.html")
+    if err != nil {
+      panic(err)
+    }
+    fmt.Fprintln(res, "%v", b)
 }
