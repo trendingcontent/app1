@@ -4,8 +4,8 @@ import (
     "fmt"
     "net/http"
     "os"
-//    "io/ioutil"
-    "path/filepath"
+    "io/ioutil"
+//    "path/filepath"
 )
 
 func main() {
@@ -19,16 +19,18 @@ func main() {
 }
 
 func hello(res http.ResponseWriter, req *http.Request) {
-    /*
-    b,err := ioutil.ReadFile("html/index.html")
+    
+    b,err := ioutil.ReadFile("go/src/trends/html/index.html")
     if err != nil {
       panic(err)
     }
-    */
+    /*
     s,err := filepath.Abs(".")
     if err != nil {
       panic(err)
     }
 
     fmt.Fprintln(res, s)
+    */
+    fmt.Fprintln(res, "%v", b)
 }
