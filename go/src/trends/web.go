@@ -5,7 +5,6 @@ import (
     "net/http"
     "os"
     "io/ioutil"
-//    "path/filepath"
 )
 
 func main() {
