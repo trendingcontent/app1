@@ -16,6 +16,6 @@ func main() {
 
 }
 
-func myHandler(res http.ResponseWriter, req *http.Request) {
+func hello(res http.ResponseWriter, req *http.Request) {
     fmt.Fprintln(res, "hello, world")
 }
