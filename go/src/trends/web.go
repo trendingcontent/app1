@@ -24,13 +24,5 @@ func hello(res http.ResponseWriter, req *http.Request) {
     if err != nil {
       panic(err)
     }
-    /*
-    s,err := filepath.Abs(".")
-    if err != nil {
-      panic(err)
-    }
-
-    fmt.Fprintln(res, s)
-    */
-    fmt.Fprintln(res, "%v", b)
+    fmt.Fprintln(res, string(b))
 }
