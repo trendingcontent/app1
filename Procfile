@@ -1,1 +1,1 @@
-web: go.files
+web: go
